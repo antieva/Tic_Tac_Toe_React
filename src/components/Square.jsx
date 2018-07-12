@@ -9,15 +9,19 @@ class Square extends React.Component {
   }
   render() {
     return (
-      <button className="square" onClick={() => alert('click')}>
+      <div
+         className="square"
+         onClick={() => this.setState({value: 'X'})}>
         <style jsx>{`
           .square {
             width: 100px;
-            height: 100px;
+            height: 105px;
+            border: 1px solid green;
+            padding: 44px;
           }
       `}</style>
-        {this.props.value}
-      </button>
+    {this.state.value}
+  </div>
     );
   }
 }
